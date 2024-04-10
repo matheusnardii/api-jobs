@@ -13,10 +13,9 @@ export class OpportunityServices {
 
         return data
     }
-    async read(id: number): Promise<TOpportunity> {
-        const data = await prisma.opportunity.findFirst({ where: { id } });
-
-        return data as TOpportunity;
+    
+    read(opportunity: TOpportunity): TOpportunity {
+        return opportunity;
     }
 
     async update(id: number, body: TOpportunityUpdate): Promise<TOpportunity> {

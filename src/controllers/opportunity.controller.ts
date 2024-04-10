@@ -18,10 +18,10 @@ export class OpportunityControllers {
         return res.status(200).json(response);
     }
 
-    async read(req: Request, res: Response){
+    read(req: Request, res: Response){
         const opportunityServices = new OpportunityServices();
 
-        const response = await opportunityServices.read(Number(req.params.id));
+        const response = opportunityServices.read(res.locals.opportunity);
 
         return res.status(200).json(response);
     }
