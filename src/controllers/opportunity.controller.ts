@@ -1,23 +1,44 @@
 import { Request, Response } from "express";
+import { OpportunityServices } from "../services/opportunity.services";
 
 export class OpportunityControllers {
-    create(req: Request, res: Response){
+    async create(req: Request, res: Response){
+        const opportunityServices = new OpportunityServices();
 
+        const response = await opportunityServices.create(req.body);
+
+        return res.status(201).json(response);
+    }
+    
+    async readMany(req: Request, res: Response){
+        const opportunityServices = new OpportunityServices();
+
+        const response = await opportunityServices.readMany();
+
+        return res.status(200).json(response);
     }
 
-    read(req: Request, res: Response){
+    async read(req: Request, res: Response){
+        const opportunityServices = new OpportunityServices();
 
+        const response = await opportunityServices.read(Number(req.params.id));
+
+        return res.status(200).json(response);
     }
 
-    readMany(req: Request, res: Response){
+    async update(req: Request, res: Response){
+        const opportunityServices = new OpportunityServices();
 
+        const response = await opportunityServices.update(Number(req.params.id), req.body); 
+
+        return res.status(200).json(response);
     }
 
-    update(req: Request, res: Response){
+    async delete(req: Request, res: Response){
+        const opportunityServices = new OpportunityServices();
 
-    }
+        await opportunityServices.delete(Number(req.params.id));
 
-    delete(req: Request, res: Response){
-        
+        return res.status(204).json();
     }
 }

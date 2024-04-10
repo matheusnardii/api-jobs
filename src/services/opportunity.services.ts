@@ -1,21 +1,31 @@
+import { prisma } from "../database/prisma";
+import { TOpportunity, TOpportunityCreate, TOpportunityUpdate } from "../schemas/opportunity.schemas";
+
 export class OpportunityServices {
-    create(){
+    async create(body: TOpportunityCreate): Promise<TOpportunity> {
+        const data = await prisma.opportunity.create({ data: body });
 
+        return data;
     }
 
-    read(){
+    async readMany(): Promise<TOpportunity[]> {
+        const data = await prisma.opportunity.findMany();
 
+        return data
+    }
+    async read(id: number): Promise<TOpportunity> {
+        const data = await prisma.opportunity.findFirst({ where: { id } });
+
+        return data as TOpportunity;
     }
 
-    readMany(){
+    async update(id: number, body: TOpportunityUpdate): Promise<TOpportunity> {
+        const data = await prisma.opportunity.update({ where: { id }, data: body });
 
+        return data
     }
 
-    update(){
-
-    }
-
-    delete(){
-        
+    async delete(id: number): Promise<void> {
+        await prisma.opportunity.delete({ where: { id } });
     }
 }
