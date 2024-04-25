@@ -167,7 +167,7 @@ Possíveis erros
 
 ```json
 {
-	"message": "User is not the owner of this opportunity"
+   "message": "User is not the owner of this opportunity"
 }
 ```
 
@@ -197,7 +197,7 @@ Padrão de resposta (STATUS 200)
 
 ```json
 {
-	"message": "User is not the owner of this opportunity"
+   "message": "User is not the owner of this opportunity"
 }
 ```
 
@@ -219,7 +219,7 @@ Possíveis erros
 
 ```json
 {
-	"message": "User is not the owner of this opportunity"
+   "message": "User is not the owner of this opportunity"
 }
 ```
 
@@ -286,6 +286,6 @@ Possíveis erros
 
 ```json
 {
-	"message": "User is not the owner of this opportunity"
+   "message": "User is not the owner of this opportunity"
 }
 ```
