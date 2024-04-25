@@ -8,9 +8,9 @@ Padrão de corpo
 
 ```json
 {
-	"name": "John Doe",
-	"email": "johnDoe@mail.com",
-	"password": "123@Freedom"
+   "name": "John Doe",
+   "email": "johnDoe@mail.com",
+   "password": "123@Freedom"
 }
 ```
 
@@ -18,9 +18,9 @@ Padrão de resposta (STATUS 201)
 
 ```json
 {
-	"id": 1,
-	"name": "John Doe",
-	"email": "johnDoe@mail.com"
+   "id": 1,
+   "name": "John Doe",
+   "email": "johnDoe@mail.com"
 }
 ```
 
@@ -30,8 +30,8 @@ Padrão de corpo
 
 ```json
 {
-	"email": "johnDoe@mail.com",
-	"password": "123@Freedom"
+   "email": "johnDoe@mail.com",
+   "password": "123@Freedom"
 }
 ```
 
@@ -39,11 +39,11 @@ Padrão de resposta (STATUS 200)
 
 ```json
 {
-	"accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzEzOTc0ODgzLCJleHAiOjE3MTQwNjEyODN9.zF4MDZ9bmpvcBCkOgpjLffgfMtn-jBDgVF88AXTvbB8",
-	"user": {
-		"id": 1,
-		"name": "John Doe",
-		"email": "johnDoe@mail.com"
+   "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzEzOTc0ODgzLCJleHAiOjE3MTQwNjEyODN9.zF4MDZ9bmpvcBCkOgpjLffgfMtn-jBDgVF88AXTvbB8",
+   "user": {
+	   "id": 1,
+	   "name": "John Doe",
+	   "email": "johnDoe@mail.com"
 	}
 }
 ```
@@ -54,7 +54,7 @@ Possíveis erros
 
 ```json
 {
-	"message": "Email and password doesn't match"
+   "message": "Email and password doesn't match"
 }
 ```
 
@@ -62,7 +62,7 @@ Possíveis erros
 
 ```json
 {
-	"message": "User not registered"
+   "message": "User not registered"
 }
 ```
 
@@ -72,7 +72,7 @@ Possíveis erros
 
 ```json
 {
-	"headers":{
+   "headers":{
       "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNzE0MDQwNjk0LCJleHAiOjE3MTQxMjcwOTR9.otP2tfxgFU1WLkPY9GNSvsa0P5P74EvuyU55U6RMzos"
    } 
 }
@@ -82,9 +82,9 @@ Padrão de resposta (STATUS 200)
 
 ```json
 {
-	"id": 1,
-	"name": "John Doe",
-	"email": "johnDoe@mail.com"
+   "id": 1,
+   "name": "John Doe",
+   "email": "johnDoe@mail.com"
 }
 ```
 
