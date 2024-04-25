@@ -24,6 +24,17 @@ Padrão de resposta (STATUS 201)
 }
 ```
 
+Possíveis erros
+
+401 UNAUTHORIZED
+
+```json
+{
+   "message": "Email already registered"
+}
+```
+
+
 ### Login POST /users/login
 
 Padrão de corpo

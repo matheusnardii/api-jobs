@@ -7,7 +7,7 @@ export class IsEmailUnique {
         const user = await prisma.user.findFirst({ where: { email: req.body.email } });
 
         if (user) {
-            throw new AppError(403, "Email already registered");
+            throw new AppError(401, "Email already registered");
         }
 
         next();
