@@ -26,7 +26,7 @@ Padrão de resposta (STATUS 201)
 
 Possíveis erros
 
-401 UNAUTHORIZED
+409 CONFLICT
 
 ```json
 {
